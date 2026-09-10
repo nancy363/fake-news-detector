@@ -55,16 +55,15 @@ def stemming(content):
 st.title('Fake News Detector')
 input_text = st.text_input('Enter news Article')
 if st.button('check Authenticity'):
-   if input_text.strip():
+    if input_text.strip():
         processed_text= stemming(input_text)
         vector_input = vectorizer.transform([processed_text])
         prediction = model.predict(vector_input)
         
-
         if prediction[0] == 1:
-        st.write('The News is Fake')
+            st.write('The News is Fake')
         else:
-        st.write('The News Is Real')
-   else:
+            st.write('The News Is Real')
+    else:
         st.warning('please enter some text to check')
   
