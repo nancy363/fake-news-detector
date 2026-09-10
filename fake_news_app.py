@@ -12,7 +12,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 import joblib 
-model = joblib.load('model.plk')
+model = joblib.load('model.pkl')
 vectorizer = joblib.load('vectorizer.pkl')
 
 # Load data
